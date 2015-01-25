@@ -1,4 +1,4 @@
-# source("utility.R")
+source("utility.R")
 
 #Get SCC code with coal pollutant sources
 coalSCC <- SCC[grep("[Cc]oal", SCC$Short.Name),]
@@ -15,8 +15,9 @@ library(ggplot2)
 
 g <- ggplot(data = df, aes(x = year, y = sum)) +
   geom_line() +
-#   facet_grid(.~type) +
   ggtitle("Coal Emissions'") +
+  ylab("Total Emissions (kg)") +
+  xlab("Year") + 
   ggsave(file = "plot4.png")
 
 print(g)

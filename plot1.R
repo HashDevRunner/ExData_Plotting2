@@ -10,7 +10,7 @@ plotdat <- group_by(NEI, year) %>%
 
 png("plot1.png",width = 1024, height = 640, units = "px")
 plot(plotdat$sum~plotdat$year, type=c("l"),
-     xlab = "Year", ylab = "Emissions",
+     xlab = "Year", ylab = "Total Emissions (kg)",
      main = "Total PM2.5 Emissions by Year",
      lwd = 2)
 

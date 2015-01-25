@@ -15,6 +15,8 @@ g <- ggplot(data = plotdata, aes(x = year, y = sum)) +
   geom_line() +
   facet_grid(.~type) +
   ggtitle("Baltimore PM25 trend by 'type'") +
+  ylab("Total Emissions (kg)") +
+  xlab("Year") + 
   ggsave(file = "plot3.png")
 
 print(g)
